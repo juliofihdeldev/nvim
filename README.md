@@ -1,2 +1,2 @@
 # nvim
-My vim conf I can use across compute or env
+My nvim conf that i  can use through different compute 
