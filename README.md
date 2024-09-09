@@ -2,21 +2,21 @@
 
 ## Introduction
 
-A starting point for Neovim that is:
+A starting point for NEOVIM that is:
 
 * Small
 * Single-file
 * Completely Documented
 
-**NOT** a Neovim distribution, but instead a starting point for your configuration.
+**NOT** a NEOVIM distribution, but instead a starting point for your configuration.
 
 ## Installation
 
-### Install Neovim
+### Install NEOVIM
 
 Kickstart.nvim targets *only* the latest
 ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest
-['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of Neovim.
+['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of NEOVIM.
 If you are experiencing issues, please make sure you have the latest versions.
 
 ### Install External Dependencies
@@ -41,7 +41,7 @@ External Requirements:
 > **NOTE**
 > [Backup](#FAQ) your previous configuration (if any exists)
 
-Neovim's configurations are located under the following paths, depending on your OS:
+NEOVIM's configurations are located under the following paths, depending on your OS:
 
 | OS | PATH |
 | :- | :--- |
@@ -94,7 +94,7 @@ git clone https://github.com/nvim-lua/kickstart.nvim.git "${env:LOCALAPPDATA}\nv
 
 ### Post Installation
 
-Start Neovim
+Start NEOVIM
 
 ```sh
 nvim
@@ -104,13 +104,13 @@ That's it! Lazy will install all the plugins you have. Use `:Lazy` to view
 current plugin status. Hit `q` to close the window.
 
 Read through the `init.lua` file in your configuration folder for more
-information about extending and exploring Neovim. That also includes
+information about extending and exploring NEOVIM. That also includes
 examples of adding popularly requested plugins.
 
 
 ### Getting Started
 
-[The Only Video You Need to Get Started with Neovim](https://youtu.be/m8C0Cq9Uv9o)
+[The Only Video You Need to Get Started with NEOVIM](https://youtu.be/m8C0Cq9Uv9o)
 
 ### FAQ
 
@@ -125,16 +125,16 @@ examples of adding popularly requested plugins.
     ```
     alias nvim-kickstart='NVIM_APPNAME="nvim-kickstart" nvim'
     ```
-    When you run Neovim using `nvim-kickstart` alias it will use the alternative
+    When you run NEOVIM using `nvim-kickstart` alias it will use the alternative
     config directory and the matching local directory
-    `~/.local/share/nvim-kickstart`. You can apply this approach to any Neovim
+    `~/.local/share/nvim-kickstart`. You can apply this approach to any NEOVIM
     distribution that you would like to try out.
 * What if I want to "uninstall" this configuration:
   * See [lazy.nvim uninstall](https://github.com/folke/lazy.nvim#-uninstalling) information
 * Why is the kickstart `init.lua` a single file? Wouldn't it make sense to split it into multiple files?
   * The main purpose of kickstart is to serve as a teaching tool and a reference
     configuration that someone can easily use to `git clone` as a basis for their own.
-    As you progress in learning Neovim and Lua, you might consider splitting `init.lua`
+    As you progress in learning NEOVIM and Lua, you might consider splitting `init.lua`
     into smaller parts. A fork of kickstart that does this while maintaining the 
     same functionality is available here:
     * [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim)
@@ -144,7 +144,7 @@ examples of adding popularly requested plugins.
 
 ### Install Recipes
 
-Below you can find OS specific install instructions for Neovim and dependencies.
+Below you can find OS specific install instructions for NEOVIM and dependencies.
 
 After installing all the dependencies continue with the [Install Kickstart](#Install-Kickstart) step.
 
