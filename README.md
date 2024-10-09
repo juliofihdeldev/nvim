@@ -12,11 +12,11 @@ A starting point for NEOVIM that is:
 
 ## Installation
 
-### Install NEOVIM
+### Install NEOVIM  
 
 Kickstart.nvim targets *only* the latest
 ['stable'](https://github.com/neovim/neovim/releases/tag/stable) and latest
-['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of NEOVIM.
+['nightly'](https://github.com/neovim/neovim/releases/tag/nightly) of NEOVIM. 
 If you are experiencing issues, please make sure you have the latest versions.
 
 ### Install External Dependencies
@@ -94,7 +94,7 @@ git clone https://github.com/nvim-lua/kickstart.nvim.git "${env:LOCALAPPDATA}\nv
 
 ### Post Installation
 
-Start NEOVIM
+Start NEOVIM  
 
 ```sh
 nvim
@@ -127,7 +127,7 @@ examples of adding popularly requested plugins.
     ```
     When you run NEOVIM using `nvim-kickstart` alias it will use the alternative
     config directory and the matching local directory
-    `~/.local/share/nvim-kickstart`. You can apply this approach to any NEOVIM
+    `~/.local/share/nvim-kickstart`. You can apply this approach to any NEOVIM  
     distribution that you would like to try out.
 * What if I want to "uninstall" this configuration:
   * See [lazy.nvim uninstall](https://github.com/folke/lazy.nvim#-uninstalling) information
