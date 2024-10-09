@@ -5,7 +5,6 @@
 --]]
 
 -- Set <space> as the leader key
--- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -17,7 +16,7 @@ vim.g.have_nerd_font = true
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
-
+-- handle moveline for me with ctrl + j/k
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -62,9 +61,9 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+--  and `:help 'listchars'`
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
---  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
@@ -84,8 +83,31 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- nnoremap <leader>a ggVG
+vim.keymap.set('n', '<leader>a', 'ggVG', { desc = 'Select all' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+-- Move lines up and down with Ctrl+J and Ctrl+K
+
+-- Normal mode: Move current line down
+vim.keymap.set('n', '<C-j>', ':m .+1<CR>==', { noremap = true, silent = true })
+
+-- Normal mode: Move current line up
+vim.keymap.set('n', '<C-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+
+-- Insert mode: Move current line down and return to insert mode
+vim.keymap.set('i', '<C-j>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
+
+-- Insert mode: Move current line up and return to insert mode
+vim.keymap.set('i', '<C-k>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
+
+-- Visual mode: Move selected lines down
+vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+
+-- Visual mode: Move selected lines up
+vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -850,6 +872,8 @@ require('lazy').setup({
   require 'kickstart.plugins.fugitive', -- for adding nvim-tree pluggin
   require 'kickstart.plugins.nerd-font', -- for adding nvim-tree pluggin
   require 'kickstart.plugins.vim-visual-multi', -- for adding
+  require 'kickstart.plugins.lazygit', -- for adding lazygit pluggin
+  require 'kickstart.plugins.dashboard', -- for adding dashboard pluggin
   -- TODO: Add additional plugins here
   require('josefine').setup(),
   -- require 'kickstart.plugins.nvim-web-devicons', -- for adding nvim-tree pluggin
